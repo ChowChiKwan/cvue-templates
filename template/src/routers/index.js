@@ -12,10 +12,17 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'Hello',
       component: r => require.ensure([], (require) => {
-        r(require('@/components/hello-world'));
-      }, 'hello-world'),
+        r(require('@/template/hello'));
+      }, 'hello'),
+    },
+    {
+      path: '*',
+      name: 'error',
+      component: r => require.ensure([], (require) => {
+        r(require('@/components/exception'));
+      }, 'error'),
     },
   ],
 });
