@@ -1,0 +1,69 @@
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "plugin:vue/base",
+    "plugin:vue/essential",
+    "plugin:vue/strongly-recommended",
+    "plugin:vue/recommended"{{#eslint}},
+    {{#if_eq eslintConfig "airbnb"}}
+    "airbnb-base"
+    {{/if_eq}}
+    {{#if_eq eslintConfig "standard"}}
+    "standard"
+    {{/if_eq}}
+    {{/eslint}}
+  ],
+  "plugins": [
+    "vue"
+  ],
+  {{#if_eq eslintConfig "airbnb"}}
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.base.js"
+      }
+    }
+  },
+  {{/if_eq}}
+  "rules": {
+    {{#if_eq eslintConfig "airbnb"}}
+    // don't require .vue extension when importing
+    "import/extensions": ["error", "always", {
+      "js": "never",
+      "vue": "never"
+    }],
+    // disallow reassignment of function parameters
+    // disallow parameter object manipulation except for specific exclusions
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsFor": [
+        "state", // for vuex state
+        "acc", // for reduce accumulators
+        "e" // for e.returnvalue
+      ]
+    }],
+    {{/if_eq}}
+    {{#if_eq lintConfig "standard"}}
+    // allow async-await
+    "generator-star-spacing": "off",
+    {{/if_eq}}
+    "linebreak-style": "off",
+    "no-console": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.vue"
+      ],
+      "rules": {
+      }
+    }
+  ]
+}

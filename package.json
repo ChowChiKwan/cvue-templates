@@ -1,0 +1,20 @@
+{
+  "name": "cvue-templates",
+  "version": "1.0.0",
+  "description": "A full-featured Webpack 4.x setup with hot reload, linting, testing & css extraction.",
+  "main": "meta.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChowChiKwan/cvue-templates.git"
+  },
+  "keywords": [],
+  "author": "ChowChiKwan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChowChiKwan/cvue-templates/issues"
+  },
+  "homepage": "https://github.com/ChowChiKwan/cvue-templates#readme"
+}
