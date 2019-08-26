@@ -4,7 +4,7 @@
 const { resolve } = require('path');
 const webpackMerge = require('webpack-merge');
 const WebpackSftpClient = require('webpack-sftp-client');
-const config = require('./webpack.config.dist.js');
+const config = require('./webpack.dist.js');
 
 const BUILD_PATH = resolve(__dirname, 'dist');
 
@@ -17,8 +17,8 @@ module.exports = webpackMerge(config, {
       password: '',
       path: BUILD_PATH,
       remotePath: '',
-      verbose: true
-    })
-  ]
+      verbose: true,
+    }),
+  ],
 });
 
