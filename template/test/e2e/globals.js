@@ -1,5 +1,5 @@
 /**
- * Created by ChowChiKwan on 2019/08/26.
+ * Created by niefz on 2018/9/18.
  */
 module.exports = {
   // this controls whether to abort the test execution when an assertion failed and skip the rest

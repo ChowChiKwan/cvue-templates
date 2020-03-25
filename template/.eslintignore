@@ -1,3 +1,8 @@
-node_modules
-src/assets/js
-test
+/node_modules
+/src/assets/js
+{{#e2e}}
+/test/e2e/report
+{{/e2e}}
+{{#unit}}
+/test/unit/coverage
+{{/unit}}

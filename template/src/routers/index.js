@@ -1,5 +1,5 @@
 /**
- * Created by ChowChiKwan on 2019/08/26.
+ * Created by niefz on 2018/9/18.
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -14,7 +14,7 @@ export default new VueRouter({
       path: '/',
       name: 'HelloWorld',
       component: r => require.ensure([], (require) => {
-        r(require('@/components/hello-world'));
+        r(require('src/components/hello-world/hello-world.vue'));
       }, 'hello-world'),
     },
   ],

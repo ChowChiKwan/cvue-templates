@@ -27,7 +27,7 @@
   "settings": {
     "import/resolver": {
       "webpack": {
-        "config": "webpack.base.js"
+        "config": "webpack.config.base.js"
       }
     }
   },
@@ -63,7 +63,6 @@
         "*.vue"
       ],
       "rules": {
-        "indent": "off"
       }
     }
   ]
