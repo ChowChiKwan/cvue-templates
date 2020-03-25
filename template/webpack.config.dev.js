@@ -23,7 +23,7 @@ module.exports = webpackMerge(webpackBaseConfig, {
     compress: true,
     historyApiFallback: true,
     allowedHosts: [
-      '.midea.com',
+      '.xx.com',
     ],
     hot: true,
     open: true,

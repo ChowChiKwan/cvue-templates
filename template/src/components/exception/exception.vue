@@ -2,9 +2,10 @@
   <div class="exception">
     <div class="exception-inner">
       <img
-        class="exception-inner--img"
         :src="exceptionImg"
-        :alt="exception">
+        :alt="exception"
+        class="exception-inner--img"
+      >
       <div class="exception-inner--content">
         <h1>
           <slot name="title">\{{ exception }}</slot>

@@ -14,14 +14,14 @@ export default new VueRouter({
       path: '/',
       name: 'Hello',
       component: r => require.ensure([], (require) => {
-        r(require('@/template/hello'));
+        r(require('src/template/hello'));
       }, 'hello'),
     },
     {
       path: '*',
       name: 'error',
       component: r => require.ensure([], (require) => {
-        r(require('@/components/exception'));
+        r(require('src/components/exception'));
       }, 'error'),
     },
   ],
