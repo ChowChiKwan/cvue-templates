@@ -1,10 +1,10 @@
 /**
- * Created by niefz on 2018/9/18.
+ * Created by chowchikwan on 2018/9/18.
  */
 const { resolve } = require('path');
 const webpackMerge = require('webpack-merge');
 const WebpackSftpClient = require('webpack-sftp-client');
-const config = require('./webpack.config.dist.js');
+const config = require('./webpack.prod.js');
 
 const BUILD_PATH = resolve(__dirname, 'dist');
 
@@ -17,8 +17,8 @@ module.exports = webpackMerge(config, {
       password: '',
       path: BUILD_PATH,
       remotePath: '',
-      verbose: true
-    })
-  ]
+      verbose: true,
+    }),
+  ],
 });
 

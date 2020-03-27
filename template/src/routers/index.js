@@ -1,5 +1,5 @@
 /**
- * Created by niefz on 2018/9/18.
+ * Created by chowchikwan on 2018/9/18.
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -12,17 +12,10 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'Hello',
+      name: 'HelloWorld',
       component: r => require.ensure([], (require) => {
-        r(require('src/template/hello'));
-      }, 'hello'),
-    },
-    {
-      path: '*',
-      name: 'error',
-      component: r => require.ensure([], (require) => {
-        r(require('src/components/exception'));
-      }, 'error'),
+        r(require('@/components/hello-world'));
+      }, 'hello-world'),
     },
   ],
 });

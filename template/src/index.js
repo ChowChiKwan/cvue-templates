@@ -1,5 +1,5 @@
 /**
- * Created by niefz on 2018/9/18.
+ * Created by chowchikwan on 2018/9/18.
  */
 import '@babel/polyfill';
 
@@ -38,5 +38,15 @@ const app = new Vue({
   {{/i18n}}
   render: h => h(App),
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+      console.log('SW registered: ', registration);
+    }).catch((registrationError) => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
+}
 
 export default { app };
